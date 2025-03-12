@@ -1,31 +1,44 @@
-/* Estilizando o título principal */
-h1 {
-    color: #2f4f4f; /* Cor do texto em cinza escuro */
-    margin-bottom: 10px; /* Espaço abaixo do título */
-  }
-  
-  /* Estilizando a lista de navegação */
-  #main-nav {
-    margin-top: 10px; /* Espaço acima da lista */
-    list-style: none; /* Remove os marcadores de lista */
-    padding-left: 0; /* Remove o preenchimento padrão à esquerda */
-  }
-  
-  /* Estilizando os itens da lista */
-  #main-nav li {
-    display: inline-block; /* Torna os itens da lista exibidos lado a lado */
-  }
-  
-  /* Estilizando os links dentro da lista */
-  #main-nav a {
-    color: white; /* Cor do texto dos links */
-    background-color: #13a4a4; /* Fundo azul-ciano */
-    padding: 5px; /* Espaçamento interno ao redor do texto */
-    border-radius: 2px; /* Bordas arredondadas */
-    text-decoration: none; /* Remove o sublinhado padrão dos links */
-  }
-  
-  /* Tentando substituir o estilo inline do link "Especiais" */
-  .featured {
-    background-color: blue !important; /* Prioridade máxima para substituir o estilo inline */
-  }
+/* 
+  Estilo para links não visitados (:link)
+  Este estilo será aplicado a todos os links que ainda não foram clicados pelo usuário.
+*/
+a:link {
+  background-color: blue; /* Fundo azul */
+  color: white; /* Texto branco */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  padding: 5px 10px; /* Adiciona espaçamento interno */
+  border-radius: 5px; /* Borda arredondada */
+}
+
+/* 
+  Estilo para links visitados (:visited)
+  Este estilo será aplicado a links que o usuário já acessou.
+*/
+a:visited {
+  background-color: purple; /* Fundo roxo */
+  color: white; /* Mantém o texto branco */
+}
+
+/* 
+  Estilo para links ao passar o mouse (:hover)
+  Este estilo será ativado quando o usuário passar o mouse sobre o link.
+*/
+a:hover {
+  background-color: transparent; /* Remove o fundo */
+  color: blue; /* Altera a cor do texto para azul */
+  text-decoration: underline; /* Adiciona sublinhado */
+}
+
+/* 
+  Estilo para links ativos (:active)
+  Este estilo será aplicado no momento em que o usuário clica no link.
+*/
+a:active {
+  color: red; /* Altera a cor do texto para vermelho */
+}
+
+/* 
+  Observação: A ordem dessas pseudo-classes é importante!
+  Use sempre a ordem LoVe/HAte (Link, Visited, Hover, Active).
+  Isso garante que os estilos sejam aplicados corretamente sem conflitos.
+*/
