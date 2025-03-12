@@ -1,0 +1,25 @@
+/* ORDEM DE IMPORTANCIA
+!important > inline styles > ID > Classes > Tags */
+
+
+/* tag - menor especificidade */
+p {
+    color: blue;
+}
+
+/* classe - média especificidade */
+.destaque {
+    color: green;
+    font-weight: bold;
+}
+
+/* ID - alta especificidade */
+#titulo-principal {
+    color: red;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.cabecalho {
+    font-family: Arial, sans-serif;
+}
