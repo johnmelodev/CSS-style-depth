@@ -1,0 +1,14 @@
+3 Diferentes CCS (Cascadian style sheets)
+
+User-Agent Styles
+<h1><link> já vem pronto
+
+Author syles
+Estilo que o desenvolvedor coloca quando cria
+
+User Style
+O usuario cria as regras
+
+
+DECLARACAO INLINE
+<a href="/specials" style="background-color: orange;">Especiais</a>

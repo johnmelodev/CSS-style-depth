@@ -1,23 +1,29 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Folhas de Estilo</title>
+    <!-- Link para a folha de estilo externa -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Cabeçalho da página com diferentes níveis de especificidade -->
-    <header class="cabecalho">
-        <!-- Elemento com ID, classe e tag -->
-        <h1 id="titulo-principal" class="destaque">Título Principal</h1>
+    <!-- Cabeçalho da página -->
+    <h1>Título Principal</h1>
 
-        <!-- Elementos com apenas classe -->
-        <p class="texto">Este é um parágrafo normal.</p>
-        <p class="destaque">Este é um parágrafo destacado.</p>
-
-        <!-- Elemento somente com tag -->
-        <p>Este é outro parágrafo normal.</p>
-    </header>
+    <!-- Menu de navegação -->
+    <ul id="main-nav">
+        <li><a href="/home">Início</a></li>
+        <li><a href="/about">Sobre</a></li>
+        <li>
+            <!-- Exemplo de estilo inline -->
+            <a href="/specials" class="featured" style="background-color: orange;">
+                Especiais
+            </a>
+        </li>
+    </ul>
 </body>
 
 </html>
