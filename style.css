@@ -1,47 +1,44 @@
-/* A palavra-chave 'inherit' */
-.footer a {
-  color: inherit; /* Herda a cor do pai */
+/* Definindo o tamanho base da fonte para o documento */
+html {
+  font-size: 16px; /* Base padrão para cálculos de rems */
 }
 
-/* A palavra-chave 'initial' */
-.footer a {
-  background-color: initial; /* Restaura para o valor padrão */
+/* Estilo global para o corpo da página */
+body {
+  font-size: 1rem; /* 1rem = 16px (base definida no html) */
+  margin: 2rem; /* Margem externa de 32px */
 }
 
-/* A palavra-chave 'unset' */
-.footer a {
-  color: unset; /* Herda a cor do pai */
-  background-color: unset; /* Restaura para o valor padrão */
+/* Classe para estilizar caixas */
+.box {
+  padding: 1em; /* Preenchimento relativo ao tamanho da fonte do elemento atual */
+  border-radius: 1em; /* Borda arredondada relativa ao tamanho da fonte */
+  background-color: lightgray; /* Cor de fundo */
+  margin-bottom: 1rem; /* Espaçamento entre as caixas */
 }
 
-/* A palavra-chave 'revert' */
-.footer a {
-  text-decoration: revert; /* Volta para o estilo padrão do navegador */
+/* Modificador para caixa pequena */
+.box-small {
+  font-size: 12px; /* Tamanho de fonte fixo para esta caixa */
 }
 
-/* Propriedades de taquigrafia */
-.title {
-  font: italic bold 32px/1.2 "Helvetica", "Arial", sans-serif; /* Define fonte */
+/* Modificador para caixa grande */
+.box-large {
+  font-size: 18px; /* Tamanho de fonte fixo para esta caixa */
 }
 
-.btn {
-  border: 2px solid black; /* Define borda */
+/* Estilo para o slogan */
+.slogan {
+  font-size: 1.2em; /* 1.2 vezes o tamanho herdado (16px * 1.2 = 19.2px) */
+  padding: 1.2em; /* Preenchimento relativo ao tamanho da fonte calculado (19.2px * 1.2 = 23.04px) */
+  background-color: #ccc; /* Fundo cinza claro */
 }
 
-.btn {
-  background: url('imagem.jpg') no-repeat center / cover fixed; /* Define fundo */
+/* Estilo para listas aninhadas */
+ul {
+  font-size: 0.8em; /* Reduz o tamanho da fonte para listas de primeiro nível */
 }
 
-/* Cuidado com as abreviações */
-h1 {
-  font: bold 16px Arial; /* Define fonte */
-}
-
-/* Ordem dos valores abreviados */
-.nav a {
-  padding: 10px 15px 0 5px; /* Top, Right, Bottom, Left */
-}
-
-.nav a {
-  padding: 5px 15px; /* Top e Bottom, Left e Right */
+ul ul {
+  font-size: 1em; /* Mantém o tamanho da fonte consistente para listas aninhadas */
 }
