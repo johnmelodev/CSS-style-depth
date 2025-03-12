@@ -1,44 +1,47 @@
-/* 
-  Estilo para links não visitados (:link)
-  Este estilo será aplicado a todos os links que ainda não foram clicados pelo usuário.
-*/
-a:link {
-  background-color: blue; /* Fundo azul */
-  color: white; /* Texto branco */
-  text-decoration: none; /* Remove o sublinhado padrão */
-  padding: 5px 10px; /* Adiciona espaçamento interno */
-  border-radius: 5px; /* Borda arredondada */
+/* A palavra-chave 'inherit' */
+.footer a {
+  color: inherit; /* Herda a cor do pai */
 }
 
-/* 
-  Estilo para links visitados (:visited)
-  Este estilo será aplicado a links que o usuário já acessou.
-*/
-a:visited {
-  background-color: purple; /* Fundo roxo */
-  color: white; /* Mantém o texto branco */
+/* A palavra-chave 'initial' */
+.footer a {
+  background-color: initial; /* Restaura para o valor padrão */
 }
 
-/* 
-  Estilo para links ao passar o mouse (:hover)
-  Este estilo será ativado quando o usuário passar o mouse sobre o link.
-*/
-a:hover {
-  background-color: transparent; /* Remove o fundo */
-  color: blue; /* Altera a cor do texto para azul */
-  text-decoration: underline; /* Adiciona sublinhado */
+/* A palavra-chave 'unset' */
+.footer a {
+  color: unset; /* Herda a cor do pai */
+  background-color: unset; /* Restaura para o valor padrão */
 }
 
-/* 
-  Estilo para links ativos (:active)
-  Este estilo será aplicado no momento em que o usuário clica no link.
-*/
-a:active {
-  color: red; /* Altera a cor do texto para vermelho */
+/* A palavra-chave 'revert' */
+.footer a {
+  text-decoration: revert; /* Volta para o estilo padrão do navegador */
 }
 
-/* 
-  Observação: A ordem dessas pseudo-classes é importante!
-  Use sempre a ordem LoVe/HAte (Link, Visited, Hover, Active).
-  Isso garante que os estilos sejam aplicados corretamente sem conflitos.
-*/
+/* Propriedades de taquigrafia */
+.title {
+  font: italic bold 32px/1.2 "Helvetica", "Arial", sans-serif; /* Define fonte */
+}
+
+.btn {
+  border: 2px solid black; /* Define borda */
+}
+
+.btn {
+  background: url('imagem.jpg') no-repeat center / cover fixed; /* Define fundo */
+}
+
+/* Cuidado com as abreviações */
+h1 {
+  font: bold 16px Arial; /* Define fonte */
+}
+
+/* Ordem dos valores abreviados */
+.nav a {
+  padding: 10px 15px 0 5px; /* Top, Right, Bottom, Left */
+}
+
+.nav a {
+  padding: 5px 15px; /* Top e Bottom, Left e Right */
+}

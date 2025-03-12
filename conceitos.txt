@@ -1,8 +1,36 @@
-Os estados dos links em 
-CSS 
-(
-:link,
-:visited, 
-:hover, 
-:active,
-)
+HERANCA POR ELEMENTO
+
+voce pode passar um estilo ao seu elemento body e todas as fontes abaixo herdarao isso por exemplo
+
+Herança em CSS permite que elementos filhos recebam estilos dos pais, como font-family e color.
+Nem todas as propriedades são herdadas (ex.: bordas). Use inherit para forçar herança.
+DevTools ajuda a visualizar cascata e herança. Aplicar estilos ao <body> propaga automaticamente aos descendentes,
+evitando repetição. Propriedades de texto e listas são comumente herdadas.
+
+--------------------------------------------------------
+
+
+Valores especiais como 
+
+inherit= herda a fonte do pai exemplo , 
+inicial= Restaura para o valor padrão definido pelo navegador ,
+unset= se for herdade herda, caso contrario segue o padrao navegador ,
+revert= revert para o estilo do navegador
+
+oferecem controle preciso sobre a cascata de estilos. 
+Propriedades de taquigrafia simplificam o CSS, mas requerem atenção à ordem e ao comportamento implícito. 
+Use esses conceitos para criar layouts consistentes e evitar sobrescritas indesejadas.
+
+--------------------------------------------------------
+
+Propriedades de shorthand
+
+Pode redefinir varias propriedades que se pertencem ao mesmo tempo
+
+.nav a {
+    padding: 10px 15px 0 5px; /* Top, Right, Bottom, Left */
+}
+
+.nav .featured {
+    box-shadow: 10px 2px #6f9090; /* Horizontal, then Vertical */
+}
