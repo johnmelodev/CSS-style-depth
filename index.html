@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Uso do :root</title>
+    <title>Posicionamento CSS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>Exemplo de :root em CSS</h1>
-    </header>
+    <!-- Contêiner pai para referência visual -->
+    <div class="container">
+        <p>Contêiner pai (referência)</p>
 
-    <main>
-        <section class="content">
-            <p>Este é um parágrafo com uma cor de texto definida usando uma variável CSS.</p>
-            <button class="btn">Clique Aqui</button>
-        </section>
-    </main>
+        <!-- Div explicando o posicionamento static -->
+        <div class="box static">Static</div>
 
-    <footer>
-        <p>Todos os direitos reservados &copy; 2023</p>
-    </footer>
+        <!-- Div explicando o posicionamento relative -->
+        <div class="box relative">Relative</div>
+
+        <!-- Div explicando o posicionamento absolute -->
+        <div class="box absolute">Absolute</div>
+    </div>
 </body>
 
 </html>
