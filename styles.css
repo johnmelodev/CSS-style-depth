@@ -1,33 +1,55 @@
 /* Estilo básico para o corpo da página */
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: #222;
+  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
 }
 
-/* Estilo para o contêiner da barra de energia */
-.energy-bar {
-  width: 300px;
-  height: 30px;
-  background-color: #444;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+/* Estilo básico para todas as divs */
+.box {
+  width: 80%; /* Largura padrão para todas as divs */
+  padding: 20px;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 10px;
 }
 
-/* Estilo para o nível de energia */
-.energy-level {
-  width: 50%; /* Largura inicial da barra de energia */
-  height: 100%;
-  background-color: green;
-  transition: width 0.3s ease; /* Transição suave ao alterar a largura */
+/* Demonstração da função calc() */
+.calc-box {
+  background-color: #3498db; /* Azul claro */
+  /* A função calc() permite combinar diferentes unidades de medida.
+     Aqui, definimos a largura como 50% da largura do contêiner + 100px. */
+  width: calc(50% + 100px);
 }
 
-/* Efeito de hover: aumenta a largura da barra de energia */
-.energy-bar:hover .energy-level {
-  width: calc(50% + 20%); /* Aumenta a largura usando calc() */
+/* Demonstração da função clamp() */
+.clamp-box {
+  background-color: #e74c3c; /* Vermelho */
+  /* A função clamp() define um valor mínimo, ideal e máximo.
+     Aqui, a largura será no mínimo 200px, idealmente 50% da largura do contêiner,
+     e no máximo 600px. */
+  width: clamp(200px, 50%, 600px);
+}
+
+/* Demonstração da função min() */
+.min-box {
+  background-color: #2ecc71; /* Verde */
+  /* A função min() resolve para o menor dos valores fornecidos.
+     Aqui, a largura será a menor entre 200px e 50% da largura do contêiner. */
+  width: min(200px, 50%);
+}
+
+/* Demonstração da função max() */
+.max-box {
+  background-color: #9b59b6; /* Roxo */
+  /* A função max() resolve para o maior dos valores fornecidos.
+     Aqui, a largura será a maior entre 300px e 50% da largura do contêiner. */
+  width: max(300px, 50%);
 }
