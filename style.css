@@ -1,44 +1,68 @@
-/* Definindo o tamanho base da fonte para o documento */
-html {
-  font-size: 16px; /* Base padrão para cálculos de rems */
+/* 
+  :root é uma pseudo-classe que seleciona o elemento raiz do documento.
+  No caso do HTML, o elemento raiz é sempre o <html>.
+  Usar :root para definir variáveis CSS permite que essas variáveis sejam acessíveis globalmente em todo o documento.
+*/
+:root {
+  /* Definindo variáveis globais para cores */
+  --cor-primaria: #3498db; /* Azul claro */
+  --cor-secundaria: #2ecc71; /* Verde claro */
+  --cor-texto: #333; /* Cor do texto principal */
+  --fonte-principal: Arial, sans-serif; /* Fonte padrão */
+
+  /* Definindo variáveis para espaçamentos */
+  --padding-padrao: 1rem;
+  --borda-radius: 0.5rem;
 }
 
-/* Estilo global para o corpo da página */
+/*
+  Aplicando as variáveis globais ao body para estilizar a página inteira.
+  Todas as propriedades aqui usam valores definidos no :root.
+*/
 body {
-  font-size: 1rem; /* 1rem = 16px (base definida no html) */
-  margin: 2rem; /* Margem externa de 32px */
+  font-family: var(--fonte-principal); /* Usa a fonte definida no :root */
+  color: var(--cor-texto); /* Usa a cor de texto definida no :root */
+  margin: 0;
+  padding: var(--padding-padrao); /* Usa o padding padrão definido no :root */
+  background-color: #f4f4f4; /* Cor de fundo simples */
 }
 
-/* Classe para estilizar caixas */
-.box {
-  padding: 1em; /* Preenchimento relativo ao tamanho da fonte do elemento atual */
-  border-radius: 1em; /* Borda arredondada relativa ao tamanho da fonte */
-  background-color: lightgray; /* Cor de fundo */
-  margin-bottom: 1rem; /* Espaçamento entre as caixas */
+/*
+  Estilizando o cabeçalho (header) com uma cor primária.
+*/
+header {
+  background-color: var(--cor-primaria); /* Usa a cor primária definida no :root */
+  color: white;
+  text-align: center;
+  padding: var(--padding-padrao);
 }
 
-/* Modificador para caixa pequena */
-.box-small {
-  font-size: 12px; /* Tamanho de fonte fixo para esta caixa */
+/*
+  Estilizando os botões com variáveis de cor e borda.
+*/
+.btn {
+  background-color: var(--cor-secundaria); /* Usa a cor secundária definida no :root */
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--borda-radius); /* Usa o raio da borda definido no :root */
+  cursor: pointer;
+  font-size: 1rem;
 }
 
-/* Modificador para caixa grande */
-.box-large {
-  font-size: 18px; /* Tamanho de fonte fixo para esta caixa */
+/*
+  Alterando o estilo do botão ao passar o mouse sobre ele.
+*/
+.btn:hover {
+  background-color: darken(var(--cor-secundaria), 10%); /* Escurece a cor secundária */
 }
 
-/* Estilo para o slogan */
-.slogan {
-  font-size: 1.2em; /* 1.2 vezes o tamanho herdado (16px * 1.2 = 19.2px) */
-  padding: 1.2em; /* Preenchimento relativo ao tamanho da fonte calculado (19.2px * 1.2 = 23.04px) */
-  background-color: #ccc; /* Fundo cinza claro */
-}
-
-/* Estilo para listas aninhadas */
-ul {
-  font-size: 0.8em; /* Reduz o tamanho da fonte para listas de primeiro nível */
-}
-
-ul ul {
-  font-size: 1em; /* Mantém o tamanho da fonte consistente para listas aninhadas */
+/*
+  Estilizando o rodapé (footer) com uma cor de fundo mais clara.
+*/
+footer {
+  text-align: center;
+  padding: var(--padding-padrao);
+  background-color: #ddd;
+  color: var(--cor-texto);
 }
