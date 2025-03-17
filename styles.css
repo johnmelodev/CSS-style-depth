@@ -16,20 +16,21 @@ body {
   margin: 0 auto;
 }
 
-.page-header h1 {  
-  max-width: var(--column-width); /*A*/  
-  margin: 0 auto; /*B*/  
-  }  
 
 .page-header{
   color: #fff;
   background-color: var(--brand-color);
 }
 
+.page-header h1 {  
+max-inline-size: var(--column-width); /*A*/  
+margin-inline: auto; /*B*/  
+}  
+
 .container {  
-  max-width: var(--column-width); /*A*/  
-  margin: 0 auto; /*B*/  
-  }  
+max-inline-size: var(--column-width); /*A*/  
+margin-inline: auto; /*B*/  
+}  
 
 .main {
   background-color: #fff;
