@@ -1,27 +1,42 @@
-/* Estilo geral para melhor visualização */
+:root {  
+  --brand-color: #0072b0;  
+  --column-width: 1080px;  
+  }  
+
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+  margin: unset;
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-/* Estilo para a div com display block */
-.block {
-    display: block; /* Define o comportamento como block */
-    background-color: #0072b0; /* Cor de fundo para destacar o elemento */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    margin-bottom: 10px; /* Margem inferior para separar os elementos */
-    text-align: center; /* Centraliza o texto dentro da div */
-    /* Um elemento block ocupa toda a largura disponível e sempre começa em uma nova linha. */
+.navbar {  
+  max-width: var(--column-width);
+  margin: 0 auto;
 }
 
-/* Estilo para a div com display inline */
-.inline {
-    display: inline; /* Define o comportamento como inline */
-    background-color: #ff6347; /* Cor de fundo diferente para destacar o elemento */
-    color: white; /* Cor do texto */
-    padding: 10px; /* Espaçamento interno */
-    /* Um elemento inline flui junto com o texto ou outros elementos inline, 
-       e só ocupa o espaço necessário para seu conteúdo. */
+.page-header h1 {  
+  max-width: var(--column-width); /*A*/  
+  margin: 0 auto; /*B*/  
+  }  
+
+.page-header{
+  color: #fff;
+  background-color: var(--brand-color);
+}
+
+.container {  
+  max-width: var(--column-width); /*A*/  
+  margin: 0 auto; /*B*/  
+  }  
+
+.main {
+  background-color: #fff;
+  border-radius: 0.5em;
+}
+
+.social-links {
+  background-color: #fff;
+  border-radius: 0.5em;
 }
