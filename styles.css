@@ -1,103 +1,33 @@
-/* Estilo básico para todas as caixas */
+/* Estilo básico para a página */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
-
-/* Contêiner pai para referência visual */
-.container {
-  width: 80%;
-  height: 1500px; /* Altura maior para permitir rolagem */
-  margin: 0 auto; /* Centraliza o contêiner */
-  border: 2px dashed black; /* Borda tracejada para referência */
-  position: relative; /* Define o contexto de posicionamento para 'absolute' */
-  background-color: #eaeaea; /* Fundo claro para contraste */
-  padding: 20px;
-}
-
-.container p {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.box {
-  width: 150px;
-  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Estilo da caixa */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
-  font-weight: bold;
   border-radius: 10px;
-  margin-bottom: 20px;
+
+  /* Propriedades da transição */
+  transition: all 0.5s ease; /* Aplica transição suave a todas as propriedades */
 }
 
-/* Explicação do posicionamento static */
-.static {
-  background-color: red; /* Cor vermelha para identificar */
-  position: static; /* Posicionamento padrão */
-  /*
-    O posicionamento 'static' é o padrão de todos os elementos.
-    Ele não responde a propriedades como 'top', 'left', 'right', ou 'bottom'.
-    A caixa permanece no fluxo normal do documento.
-  */
-}
-
-/* Explicação do posicionamento relative */
-.relative {
-  background-color: blue; /* Cor azul para identificar */
-  position: relative; /* Posicionamento relativo */
-  top: 50px; /* Move a caixa 50px para baixo em relação à sua posição original */
-  left: 50px; /* Move a caixa 50px para a direita em relação à sua posição original */
-  /*
-    O posicionamento 'relative' move o elemento em relação à sua posição original no fluxo do documento.
-    As propriedades 'top', 'left', 'right', e 'bottom' são usadas para ajustar a posição.
-    Outros elementos ao redor não são afetados pela mudança.
-  */
-}
-
-/* Explicação do posicionamento absolute */
-.absolute {
-  background-color: pink; /* Cor rosa para identificar */
-  position: absolute; /* Posicionamento absoluto */
-  top: 200px; /* Move a caixa 200px a partir do topo do contexto de posicionamento */
-  left: 300px; /* Move a caixa 300px a partir da esquerda do contexto de posicionamento */
-  /*
-    O posicionamento 'absolute' remove o elemento do fluxo normal do documento.
-    Ele é posicionado em relação ao ancestral mais próximo que tenha um 'position'
-    diferente de 'static'. Se nenhum ancestral for encontrado, ele será posicionado
-    em relação ao documento (viewport).
-    As propriedades 'top', 'left', 'right', e 'bottom' definem a posição exata.
-  */
-}
-
-/* Explicação do posicionamento sticky */
-.sticky {
-  background-color: green; /* Cor verde para identificar */
-  position: sticky; /* Posicionamento fixo condicional */
-  top: 20px; /* Fixa a caixa 20px abaixo do topo do viewport quando necessário */
-  /*
-    O posicionamento 'sticky' combina características de 'relative' e 'fixed'.
-    A caixa se comporta como 'relative' até que o usuário role a página até um ponto específico,
-    momento em que ela se torna 'fixed' em relação ao viewport.
-    É útil para criar elementos que "grudam" na tela durante a rolagem, como menus ou cabeçalhos.
-  */
-}
-
-/* Explicação do posicionamento fixed */
-.fixed {
-  background-color: orange; /* Cor laranja para identificar */
-  position: fixed; /* Posicionamento fixo */
-  bottom: 20px; /* Fixa a caixa 20px acima da parte inferior do viewport */
-  right: 20px; /* Fixa a caixa 20px à direita do viewport */
-  /*
-    O posicionamento 'fixed' remove o elemento do fluxo normal do documento.
-    Ele é posicionado em relação ao viewport, independentemente do scroll.
-    As propriedades 'top', 'left', 'right', e 'bottom' definem a posição exata.
-    É útil para criar elementos que permanecem visíveis o tempo todo, como botões de ação flutuantes.
-  */
+/* Alteração no estado ao passar o mouse */
+.box:hover {
+  background-color: red; /* Muda a cor de fundo */
+  transform: scale(1.2); /* Aumenta o tamanho da caixa */
+  border-radius: 50%; /* Arredonda a borda */
 }
