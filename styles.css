@@ -1,55 +1,48 @@
-/* Estilo básico para o corpo da página */
+/* Estilização geral */
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f4f4f4;
   font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
 }
 
-/* Estilo básico para todas as divs */
-.box {
-  width: 80%; /* Largura padrão para todas as divs */
-  padding: 20px;
-  margin: 10px 0;
-  color: white;
+h1 {
   text-align: center;
-  font-size: 1.2rem;
-  border-radius: 10px;
+  color: #333;
 }
 
-/* Demonstração da função calc() */
-.calc-box {
-  background-color: #3498db; /* Azul claro */
-  /* A função calc() permite combinar diferentes unidades de medida.
-     Aqui, definimos a largura como 50% da largura do contêiner + 100px. */
-  width: calc(50% + 100px);
+.box {
+  padding: 10px;
+  margin: 5px;
+  background-color: #f4f4f4;
+  text-align: center;
 }
 
-/* Demonstração da função clamp() */
-.clamp-box {
-  background-color: #e74c3c; /* Vermelho */
-  /* A função clamp() define um valor mínimo, ideal e máximo.
-     Aqui, a largura será no mínimo 200px, idealmente 50% da largura do contêiner,
-     e no máximo 600px. */
-  width: clamp(200px, 50%, 600px);
+/* Estilo para display: block */
+.block {
+  display: block; /* Ocupa toda a largura disponível */
+  width: 100%;
+  line-height: 100px;
+  background-color: #ffcccc; /* Cor de fundo para identificar */
 }
 
-/* Demonstração da função min() */
-.min-box {
-  background-color: #2ecc71; /* Verde */
-  /* A função min() resolve para o menor dos valores fornecidos.
-     Aqui, a largura será a menor entre 200px e 50% da largura do contêiner. */
-  width: min(200px, 50%);
+/* Estilo para display: inline */
+.inline {
+  display: inline; /* Ocupa apenas o espaço necessário */
+  gap: 100px;
+  background-color: #ccffcc; /* Cor de fundo para identificar */
 }
 
-/* Demonstração da função max() */
-.max-box {
-  background-color: #9b59b6; /* Roxo */
-  /* A função max() resolve para o maior dos valores fornecidos.
-     Aqui, a largura será a maior entre 300px e 50% da largura do contêiner. */
-  width: max(300px, 50%);
+/* Estilo para display: grid */
+.grid {
+  display: grid; /* Define um layout de grade */
+  grid-template-columns: repeat(3, 300px); /* 3 colunas iguais */
+  gap: 10px; /* Espaçamento entre os itens */
+  background-color: #ccccff; /* Cor de fundo para identificar */
+}
+
+.item {
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  text-align: center;
 }
