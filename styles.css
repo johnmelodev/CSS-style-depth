@@ -1,48 +1,81 @@
-:root {  
-  --brand-color: #0072b0;  
-  --column-width: 1080px;  
-}  
-
-/* Aplicar box-sizing universalmente */
-*, ::before, ::after {
-  box-sizing: border-box;
-}
-
+/* Estilo geral da página */
 body {
-  margin: unset;
-  background-color: #eee;
-  font-family: Helvetica, Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-.navbar {  
-  max-width: var(--column-width);
-  margin: 0 auto;
+/* Div principal que contém as duas seções (flexbox e grid) */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Espaçamento entre as duas seções */
 }
 
-.page-header {
-  color: #fff;
-  background-color: var(--brand-color);
+/* Seção para o exemplo de Flexbox */
+.flex-container {
+    display: flex;
+    /* Define o layout como Flexbox */
+    justify-content: space-around;
+    /* Distribui os itens horizontalmente com espaço ao redor */
+    align-items: center;
+    /* Alinha os itens verticalmente no centro */
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.page-header h1 {  
-  max-inline-size: var(--column-width);  
-  margin-inline: auto;  
-  padding-inline: 1.5rem; /* Certifique-se de que este valor seja consistente */
-}  
-
-.container {  
-  max-inline-size: var(--column-width);  
-  margin-inline: auto;  
-}  
-
-.main {
-  padding-inline: 1.5em;
-  background-color: #fff;
-  border-radius: 0.5em;
+/* Itens dentro do Flexbox */
+.flex-item {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+    flex: 1;
+    /* Cada item ocupa espaço igual dentro do container */
+    margin: 0 10px;
+    /* Adiciona margem entre os itens */
 }
 
-.social-links {
-  padding-inline: 1.5em;
-  background-color: #fff;
-  border-radius: 0.5em;
+/* Seção para o exemplo de Grid */
+.grid-container {
+    display: grid;
+    /* Define o layout como Grid */
+    grid-template-columns: repeat(3, 1fr);
+    /* Divide o container em 3 colunas iguais */
+    grid-gap: 20px;
+    /* Espaçamento entre os itens do grid */
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
 }
+
+/* Itens dentro do Grid */
+.grid-item {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Comentários explicativos no CSS */
+
+/* 
+Flexbox:
+- O layout Flexbox é ideal para organizar itens em uma única linha ou coluna.
+- A propriedade `justify-content` controla o alinhamento horizontal dos itens.
+- A propriedade `align-items` controla o alinhamento vertical dos itens.
+- O valor `flex: 1` faz com que os itens ocupem o espaço disponível de forma igual.
+
+Grid:
+- O layout Grid é ideal para criar layouts bidimensionais (linhas e colunas).
+- A propriedade `grid-template-columns` define o número e o tamanho das colunas.
+- A propriedade `grid-gap` adiciona espaçamento entre os itens do grid.
+- Cada `.grid-item` é automaticamente posicionado nas células do grid.
+*/

@@ -1,26 +1,32 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flexbox vs Grid</title>
 </head>
 
 <body>
-    <header class="page-header">
-        <h1>Franklin Running Club</h1>
-    </header>
+    <!-- Container principal -->
     <div class="container">
-        <main class="main">
-            <h2>Venha nos juntar!</h2>
-            <p> O <b>Franklin Running Club</b> se encontra às 18:00 toda quinta-feira na praça da cidade. As corridas
-                têm de três a cinco milhas, no seu próprio ritmo. </p>
-            <p> Junte-se a nós enquanto treinamos para o <a href="/st-patricks">Dia de São Patrício 5k</a>. Não se
-                esqueça de vestir verde! </p>
-        </main>
-        <aside class="social-links">
-            <a href="/mastodon" class="button-link">siga-nos no Mastodon</a>
-            <a href="/facebook" class="button-link">curta-nos no Facebook</a>
-        </aside>
+        <!-- Seção Flexbox -->
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <!-- Seção Grid -->
+        <div class="grid-container">
+            <div class="grid-item">Item A</div>
+            <div class="grid-item">Item B</div>
+            <div class="grid-item">Item C</div>
+            <div class="grid-item">Item D</div>
+            <div class="grid-item">Item E</div>
+            <div class="grid-item">Item F</div>
+        </div>
     </div>
 </body>
 
