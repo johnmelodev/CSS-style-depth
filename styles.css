@@ -1,48 +1,37 @@
-/* Estilização geral */
+/* Estilo geral */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  line-height: 1.6;
 }
 
-h1 {
+div {
+  width: 200px; /* Largura base */
+  height: 100px; /* Altura base */
+  padding: 20px; /* Espaçamento interno */
+  border: 10px solid black; /* Borda */
+  margin-bottom: 20px; /* Espaçamento entre as divs */
+  background-color: lightblue; /* Cor de fundo */
   text-align: center;
-  color: #333;
+  line-height: 100px; /* Centraliza texto verticalmente */
 }
 
-.box {
-  padding: 10px;
-  margin: 5px;
-  background-color: #f4f4f4;
-  text-align: center;
+/* Div com width/height normal (comportamento padrão) */
+.normal {
+  /* Largura total = width + padding + border */
+  /* Altura total = height + padding + border */
+  /* O tamanho final é maior que os 200px/100px definidos */
 }
 
-/* Estilo para display: block */
-.block {
-  display: block; /* Ocupa toda a largura disponível */
-  width: 100%;
-  line-height: 100px;
-  background-color: #ffcccc; /* Cor de fundo para identificar */
+/* Div com box-sizing: border-box */
+.border-box {
+  box-sizing: border-box;
+  /* Width/height incluem padding e border */
+  /* Tamanho total = exatamente 200px/100px */
 }
 
-/* Estilo para display: inline */
-.inline {
-  display: inline; /* Ocupa apenas o espaço necessário */
-  gap: 100px;
-  background-color: #ccffcc; /* Cor de fundo para identificar */
-}
-
-/* Estilo para display: grid */
-.grid {
-  display: grid; /* Define um layout de grade */
-  grid-template-columns: repeat(3, 300px); /* 3 colunas iguais */
-  gap: 10px; /* Espaçamento entre os itens */
-  background-color: #ccccff; /* Cor de fundo para identificar */
-}
-
-.item {
-  padding: 20px;
-  border: 1px solid #000;
-  background-color: #fff;
-  text-align: center;
+/* Div com box-sizing: content-box */
+.content-box {
+  box-sizing: content-box;
+  /* Igual ao comportamento padrão: width/height só se aplicam ao conteúdo */
+  /* Padding e border aumentam o tamanho total */
 }

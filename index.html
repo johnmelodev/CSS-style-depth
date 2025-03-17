@@ -4,33 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Display</title>
+    <title>Box-Sizing Exemplo</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Entendendo a Propriedade <code>display</code></h1>
+    <!-- Div com width/height normal -->
+    <div class="normal">Normal</div>
 
-    <!-- Div com display: block -->
-    <div class="box block">Eu sou um bloco (block)</div>
-    <div class="box block">Eu sou um bloco (block)</div>
+    <!-- Div com box-sizing: border-box -->
+    <div class="border-box">Border-box</div>
 
-    <!-- Div com display: inline -->
-    <div class="box inline">Eu sou inline</div>
-    <div class="box inline">Eu também sou inline</div>
-
-    <!-- Div com display: grid -->
-    <div class="container grid">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-    </div>
+    <!-- Div com box-sizing: content-box -->
+    <div class="content-box">Content-box</div>
 </body>
 
 </html>
