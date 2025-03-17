@@ -18,16 +18,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   border-radius: 10px;
 
-  /* Propriedades da transição */
-  transition: all 0.5s ease; /* Aplica transição suave a todas as propriedades */
+  /* Propriedades de transformação */
+  transition: transform 0.5s ease; /* Adiciona animação suave */
 }
 
-/* Alteração no estado ao passar o mouse */
+/* Aplicando transformações ao passar o mouse */
 .box:hover {
-  background-color: red; /* Muda a cor de fundo */
-  transform: scale(1.2); /* Aumenta o tamanho da caixa */
-  border-radius: 50%; /* Arredonda a borda */
+  transform: rotate(45deg) scale(1.2) translateX(50px);
 }
