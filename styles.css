@@ -77,7 +77,6 @@ padding: 0 1.5em;
   text-transform: uppercase; /*transforma tudo em maiusculo e formata o html*/
 }
 
-
 .login-form input:not([type=checkbox]):not([type=radio]) {
   display: block; /*nao necessario aqui, mas faz com que tudo digitado va oara o lado corretamente sem quebrar o display*/
   inline-size: 100%; /*para ocupar todo o comprimento disponivel do componente*/
@@ -88,4 +87,5 @@ padding: 0 1.5em;
   border: 1px solid #cc6b5a;
   background-color: white;
   padding: 0.5em 1em; 
+  cursor: pointer /*faz aparecer a maozinha*/
 }
