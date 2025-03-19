@@ -38,9 +38,16 @@ font-family: Helvetica, Arial, sans-serif;
 flex:2;
 }
 
-.column-sidebar{
+.column-sidebar{ /*criando uma coluna a direita e dividindo por gap os dois items */
 flex:1;
+display: flex;
+flex-direction: column;
+gap: var(--gap-size);
+padding: 0 1.5em;
+}
 
+.column-sidebar > .tile {
+  flex: 1; /*Ocupando 1 espaco disponivel dentro do eixo vertical da sidebar */
 }
 
 .stack * + * {
