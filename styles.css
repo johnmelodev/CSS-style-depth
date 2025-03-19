@@ -69,3 +69,23 @@ padding: 0 1.5em;
   gap: var(--gap-size);
 
 }
+.login-form h3 {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align:end; /* end; para alinhar o texto a direita no final do container*/
+  text-transform: uppercase; /*transforma tudo em maiusculo e formata o html*/
+}
+
+
+.login-form input:not([type=checkbox]):not([type=radio]) {
+  display: block; /*nao necessario aqui, mas faz com que tudo digitado va oara o lado corretamente sem quebrar o display*/
+  inline-size: 100%; /*para ocupar todo o comprimento disponivel do componente*/
+}
+
+.login-form button {
+  margin-block-start: 1em;
+  border: 1px solid #cc6b5a;
+  background-color: white;
+  padding: 0.5em 1em; 
+}
